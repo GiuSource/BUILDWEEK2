@@ -1,3 +1,10 @@
-A livello medio, l'SQL Injection risulta comunque possibile, anche se nel codice sorgente è presente la funzione mysql_real_escape_string(), che dovrebbe "sanitizzare" l'input della query aggiungendo uno "\" prima di alcuni caratteri sepciali come ";" "'" il doppio apice '"' e alcuni altri caratteri speciali che potrebbero permettere appunto l'sql injection.
+A livello medio, l'SQL Injection risulta comunque possibile, anche se nel codice sorgente è presente la funzione mysql_real_escape_string(), 
+che dovrebbe "sanitizzare" l'input della query aggiungendo uno "\" prima di alcuni caratteri sepciali come:
+";" , "'" , il doppio apice '"' e alcuni altri caratteri speciali che potrebbero permettere appunto l'sql injection.
 
-Tuttavia la variabile "$_id" contenuta in questa riga di codice : "SELECT first_name, last_name FROM users WHERE user_id = $id"; non viene "protetta" tra i 2 apici singoli come avviene a livello Low, quindi di fatto rende l'SQL injection ancora possibile semplicemente elimando l'apice "'" nell'area di testo del form e passando gli eventuali valori tra apici della clausola WHERE delle SELECT con il corrispondente valore in esadecimale.
+Tuttavia la variabile "$_id" contenuta in questa query all'interno del codice sorgente:
+
+"SELECT first_name, last_name FROM users WHERE user_id = $id"; 
+
+non viene "protetta" tra i 2 apici singoli come avveniva a livello Low, quindi di fatto rende l'SQL injection ancora possibile,
+semplicemente elimando l'apice "'" nell'area di testo del form e passando gli eventuali valori tra apici della clausola WHERE delle SELECT con il corrispondente valore in esadecimale.
