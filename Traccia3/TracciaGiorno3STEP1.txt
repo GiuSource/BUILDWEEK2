@@ -1,0 +1,10 @@
+Il programma è suddiviso in 3 parti principali,
+
+nella prima parte viene chiesto all'utente di inserire 10 numeri interi che verranno salvati nell'array di 10 numeri chiamato vector.
+
+dopodichè il programma ripropone in output all'utente tramite un ciclo for dell'array vector, l'elenco non ordinato dei numeri digitati.
+
+Dopo aver completato questo ciclo, inizia l'ordinamento del vettore eseguendo altri 2 cicli for, uno annidato all'altro per permettere 
+l'ordinamento corretto dei valori digitati all'interno dell'array. 
+
+Quindi esegue l'ultima parte di codice in cui ricicla in output l'array stavolta in ordine crescente di numeri interi.
